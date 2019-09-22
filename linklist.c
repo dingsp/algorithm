@@ -43,7 +43,8 @@ void merge(LNode *A,LNode *B)
             p->next=A->next;
             A->next=p;
             p=r;
-        }
+        }else
+            p=p->next;
         count++;
     }
     if(q){
@@ -52,7 +53,8 @@ void merge(LNode *A,LNode *B)
             q->next=A->next;
             A->next=q;
             q=r;
-        }
+        }else
+            q=q->next;
         count++;
     }
 }
